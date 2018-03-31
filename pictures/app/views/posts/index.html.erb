@@ -1,0 +1,10 @@
+<h1>Posts-All</h1>
+
+<% @posts.each do |post| %>
+  <%= image_tag post.image.url(:medium) %>
+  <%= post.title %>
+<% end %>
+
+
+
+<%= link_to 'new', new_post_path %>

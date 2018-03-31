@@ -1,0 +1,7 @@
+<h1>New-Potst</h1>
+
+<%= form_for @post, url: posts_path, html: { multipart: true } do |f| %>
+  <%= f.file_field :image %>
+  <%= f.text_field :title %>
+  <%= f.submit %>
+<% end %>
