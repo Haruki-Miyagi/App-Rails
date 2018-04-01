@@ -21,7 +21,8 @@
      list-style: none;
  }
  body {
-    font:13px/1.8 "Lucida Grande", "Lucida Sans Unicode", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Helvetica, Arial, Verdana, sans-serif
+    font:13px/1.8 "Lucida Grande", "Lucida Sans Unicode", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Helvetica, Arial, Verdana, sans-serif;
+    background-color: #f2f2f2;
 }
 
 .wrapper {
@@ -32,7 +33,8 @@
 header {
     padding: 30px 0 50px 0;
     margin: 0;
-    background-color: #FFEEFF;
+    background-color: #fff;
+    border: 5px inset #E07933;
     color: #000;
 }
 header h1 {

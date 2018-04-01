@@ -1,10 +1,18 @@
+
+<div class='wrapper'>
 <h1>Posts-All</h1>
 
-<% @posts.each do |post| %>
-  <%= image_tag post.image.url(:medium) %>
-  <%= post.title %>
-<% end %>
+  <div id='left-side'>
+    <% @posts.each do |post| %>
+      <article>        
+        <figure>
+          <%= image_tag post.image.url(:medium) %>
+        </figure>
+        <h1><%= post.title %></h1>
+        <p>post.id:<%= post.id %>body message</p>
+      </article>
+    <% end %>
+  </div>
 
-
-
-<%= link_to 'new', new_post_path %>
+  <%= link_to 'new', new_post_path %>
+</div>
