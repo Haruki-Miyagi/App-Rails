@@ -28,3 +28,24 @@ article {
         padding: 0 0 10px 0;
     }
 }
+
+#right_side {
+    width: 360px;
+    height: auto;
+    float: right;
+}
+
+.post-menue {
+    list-style: none;
+    height: 30px;
+    padding-left: 30px;
+    h2 {
+        margin-bottom: 10px;
+        font-size: 23px;
+    }
+}
+.post-menue ul li {
+    padding: 0 0 0 20px;
+    height: 30px;
+    font-size: 16px;
+}
