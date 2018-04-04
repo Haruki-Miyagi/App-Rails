@@ -4,9 +4,9 @@
 
   <div id='left-side'>
     <% @posts.each do |post| %>
-      <article>        
+      <article>
         <figure>
-          <%= image_tag post.image.url(:medium) %>
+          <%= link_to (image_tag post.image.url(:medium)), post_path(post) %>
         </figure>
         <h1><%= post.title %></h1>
         <p>post.id:<%= post.id %>body message</p>
