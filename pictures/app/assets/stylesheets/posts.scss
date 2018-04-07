@@ -53,3 +53,38 @@ article {
     height: 30px;
     font-size: 16px;
 }
+
+.show-img {
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  padding: 20px;
+  h3 {
+    font-size: 26px;
+    padding: 0;
+  }
+  .description img {
+    margin: 10px 10px 30px 0;
+    float: left;
+  }
+}
+
+section.info-nav header {
+  background-color: #422814;
+  color: #fff;
+  padding: 8px;
+}
+
+section.info-nav header h2.post-title {
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  font-family: 'Sriracha', cursive;
+  padding: 0;
+  margin: 0;
+}
+
+.footer_back {
+  clear: both;
+  text-align: center;
+	font-size: 15px;
+  border-top: 1px solid #d1d1d1;
+}

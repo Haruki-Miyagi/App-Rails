@@ -1,1 +1,17 @@
-<h2>show.post</h2>
+<div class="wrapper">
+  <section class="info-nav">
+    <header>
+      <h2 class="post-title">Post-show</h2>
+    </header>
+  </section>
+  <section class="infomation show-img">
+    <h3><%= @post.title %></h3>
+    <div class='description'>
+      <div class="post-image">
+        <%= image_tag @post.image.url(:medium) %>
+        <p>titleの説明<p>
+      </div>
+    <div>
+  <section>
+</div>
+<div class="footer_back"><%= link_to 'Back', :back %></div>
