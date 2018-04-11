@@ -2,13 +2,4 @@
 <div class='wrapper'>
   <h1>New-Potst</h1>
 </div>
-<div class='wrapper form-group new-group'>
-  <%= form_for @post, url: posts_path, html: { multipart: true } do |f| %>
-    <%= f.file_field :image %><br/>
-    <%= f.label :title %>
-    <%= f.text_field :title, class:"form-control", placeholder: 'enter title' %><br/>
-    <%= f.label :content %>
-    <%= f.text_field :content, class:"form-control", placeholder: 'enter content', style: 'height: 100px;' %><br/>
-    <%= f.submit class:"btn btn-primary" %>
-  <% end %>
-</div>
+<%= render 'form' %>

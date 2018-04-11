@@ -12,6 +12,12 @@
         </figure>
         <h1><%= post.title %></h1>
         <p><%= post.content %></p>
+        <div class: 'post_edit_dele'>
+          <ul class="clearfix">
+            <li><%= link_to '[x]', post_path(post), method: :DELETE, data: {confirm: 'Are You OK?'} %></li>
+            <li><%= link_to '[Edit]', edit_post_path(post) %></li>
+          </ul>
+        </div>
       </article>
     <% end %>
   </div>

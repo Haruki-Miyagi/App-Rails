@@ -59,3 +59,11 @@ header.nav ul li a {
 header.nav nav ul li a:hover {
     color: blue;
 }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
