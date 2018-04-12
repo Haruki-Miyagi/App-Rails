@@ -3,8 +3,15 @@
         <h1>Pictures-Test</h1>
         <nav>
             <ul>
+              <% if user_signed_in? %>
                 <li><%= link_to 'Home-Page', root_path %></li>
                 <li><%= link_to 'Pictures', posts_path %></li>
+                <li><%= link_to 'Edit User', edit_user_registration_path %></li>
+                <li><%= link_to 'LogOut', destroy_user_session_path, method: :DELETE %></li>
+              <% else %>
+                <li><%= link_to 'Login', new_user_session_path %></li>
+                <li><%= link_to 'SignUp', new_user_registration_path %></li>
+              <% end %>
             <ul>
         </nav>
     </div>
