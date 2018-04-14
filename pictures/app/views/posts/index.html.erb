@@ -1,25 +1,29 @@
 
 <div class='wrapper'>
 <h1>Posts-All</h1>
-
+<%= page_entries_info @posts %>
   <div id='left-side'>
     <% @posts.each do |post| %>
       <article>
         <%= simple_time(post.created_at) %>
-        <%= time_ago_in_words post.created_at, id: 'time_ago_created' %>
+        <%= time_ago_in_words post.created_at, id: 'time_ago_created' %><span>前</span>
+        <%= current_user.email %>
         <figure>
           <%= link_to (image_tag post.image.url(:medium)), post_path(post) %>
         </figure>
         <h1><%= post.title %></h1>
         <p><%= post.content %></p>
-        <div class: 'post_edit_dele'>
-          <ul class="clearfix">
-            <li><%= link_to '[x]', post_path(post), method: :DELETE, data: {confirm: 'Are You OK?'} %></li>
-            <li><%= link_to '[Edit]', edit_post_path(post) %></li>
-          </ul>
-        </div>
+        <% if post.user.id == current_user.id %>
+          <div class: 'post_edit_dele'>
+            <ul class="clearfix">
+              <li><%= link_to '[x]', post_path(post), method: :DELETE, data: {confirm: 'Are You OK?'} %></li>
+              <li><%= link_to '[Edit]', edit_post_path(post) %></li>
+            </ul>
+          </div>
+        <% end %>
       </article>
     <% end %>
+    <%= paginate @posts %>
   </div>
 
   <div id="right_side">
