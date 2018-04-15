@@ -1,0 +1,15 @@
+<h3>comment</h3>
+<% if post.comments.any? %>
+  <% post.comments.each do |comment| %>
+  <ul>
+    <li style="list-style-type : circle;">
+      <%= comment.content %>
+      <% if comment.user == current_user %>
+        <%= link_to post_comment_path(post, comment), method: :DELETE, data: {confirm: "Are Your Sure?"} do %>
+          <span class="glyphicon glyphicon-remove-circle"></span>
+        <% end %>
+      <% end %>
+    </li>
+  </ul>
+  <% end %>
+<% end %>

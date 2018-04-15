@@ -1,0 +1,7 @@
+
+<div class="form-group">
+  <h3>Comment_New</h3>
+  <%= form_for([post, post.comments.new]) do |f| %>
+    <%= f.text_field :content, placeholder: 'Add a comment...', class:"form-control" %>
+  <% end %>
+</div>

@@ -90,6 +90,17 @@ section.info-nav header h2.post-title {
   padding: 0;
   margin: 0;
 }
+.post-image {
+  float: left;
+  width: 350px;
+}
+.comment_list {
+  float: right;
+  width: 500px;
+  height: 260px;
+  padding: 0 10px 20px 10px;
+  overflow-y: scroll;
+}
 
 .footer_back {
   clear: both;
