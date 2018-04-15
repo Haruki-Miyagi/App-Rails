@@ -5,5 +5,6 @@ class Post < ApplicationRecord
   validates :image, presence: true
   validates :user_id, presence: true
   belongs_to :user
+  has_many :comments, dependent: :destroy
   paginates_per 3
 end
