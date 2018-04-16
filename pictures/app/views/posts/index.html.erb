@@ -6,7 +6,7 @@
       <article>
         <%= simple_time(post.created_at) %>
         <%= time_ago_in_words post.created_at, id: 'time_ago_created' %><span>前</span>
-        <%= current_user.email %>
+        <%= link_to post.user.email, profile_path(post.user.id) %>
         <figure>
           <%= link_to (image_tag post.image.url(:medium)), post_path(post) %>
         </figure>

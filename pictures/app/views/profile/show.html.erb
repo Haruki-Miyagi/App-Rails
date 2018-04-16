@@ -1,0 +1,25 @@
+<div class="wrapper row">
+  <div class="col-md-6 col-md-offset-3">
+    <h2>Profile: <%= @user.email %></h2>
+  </div>
+  <% @posts.each do |post| %>
+    <article class="col-md-6 col-md-offset-3">
+      <%= simple_time(post.created_at) %>
+      <%= time_ago_in_words post.created_at, id: 'time_ago_created' %><span>前</span>
+      <%= link_to post.user.email, profile_path(post.user.id) %>
+      <figure>
+        <%= link_to (image_tag post.image.url(:medium)), post_path(post) %>
+      </figure>
+      <h1><%= post.title %></h1>
+      <p><%= post.content %></p>
+      <% if post.user.id == current_user.id %>
+        <div class: 'post_edit_dele'>
+          <ul class="clearfix">
+            <li><%= link_to '[x]', post_path(post), method: :DELETE, data: {confirm: 'Are You OK?'} %></li>
+            <li><%= link_to '[Edit]', edit_post_path(post) %></li>
+          </ul>
+        </div>
+      <% end %>
+    </article>
+  <% end %>
+</div>
